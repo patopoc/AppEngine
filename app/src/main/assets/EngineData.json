@@ -1,0 +1,14 @@
+{
+	"useSplash":true,
+	"appType":"webapp|native",
+	"modules":[
+		{"modClass":"clase",
+		 "modPropsURL":"http://",
+		 "modMenuTitle":"String Resource name",
+		 "modMenuIcon":"drawable id",
+		 "modMenuItemAction":{ "action":"activity|fragment|intent",
+					"args":""
+		                     }
+		}
+	]
+}
