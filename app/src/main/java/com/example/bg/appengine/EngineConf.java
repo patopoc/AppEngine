@@ -11,5 +11,6 @@ public class EngineConf {
     String menuType;
     String sessionControl;
     String homeMod;
-    List<AppModules> modules;
+    List<Component> modules;
+
 }

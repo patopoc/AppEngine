@@ -5,47 +5,31 @@
 	"sessionControl":"enable|disable",
 	"homeMod":"modHome",
 	"modules":[
-		{"modClass":"clase1",
-		 "modPropsURL":"http://",
-		 "modMenuTitle":"item1",
-		 "modMenuIcon":"ic_action_call",
-		 "modMenuItemAction":{ "action":"activity|fragment|intent",
-					"args":""
-		                     },
-		 "modFunctionalDep":"modulo x",
-		 "modDepParams":[
-		                {"paramName":"parametro1","type":"mandatory|optional" , "value":"valor1"},
-		                {"paramName":"parametro2","type":"mandatory|optional" , "value":"valor2"},
-		                {"paramName":"parametro3","type":"mandatory|optional" , "value":"valor3"}
-		 ]
+		{"parent":"",
+		 "name":"clase1",
+		 "type":"menu",
+		 "propsUrl":"http://",
+		 "title":"item1",
+		 "icon":"ic_action_call",
+		 "dataSource":"url",
+		 "components":[],
+		 "layout":"fragment_module_container",
+		 "action":{"acType":"tipo",
+		           "params":[{"value":"par1"},{"value":"par2"},{"value":"par3"}]
+		           }
 		},
-		{"modClass":"clase2",
-             "modPropsURL":"http://",
-             "modMenuTitle":"item2",
-             "modMenuIcon":"ic_action_call",
-             "modMenuItemAction":{ "action":"activity|fragment|intent",
-                        "args":""
-                                 },
-             "modFunctionalDep":"modulo x",
-             "modDepParams":[
-                            {"paramName":"parametro1","type":"mandatory|optional" , "value":"valor1"},
-                            {"paramName":"parametro2","type":"mandatory|optional" , "value":"valor2"},
-                            {"paramName":"parametro3","type":"mandatory|optional" , "value":"valor3"}
-             ]
-        },
-        {"modClass":"clase3",
-             "modPropsURL":"http://",
-             "modMenuTitle":"item3",
-             "modMenuIcon":"ic_action_call",
-             "modMenuItemAction":{ "action":"activity|fragment|intent",
-                        "args":""
-                                 },
-             "modFunctionalDep":"modulo x",
-             "modDepParams":[
-                            {"paramName":"parametro1","type":"mandatory|optional" , "value":"valor1"},
-                            {"paramName":"parametro2","type":"mandatory|optional" , "value":"valor2"},
-                            {"paramName":"parametro3","type":"mandatory|optional" , "value":"valor3"}
-             ]
+		{"parent":"",
+		 "name":"clase2",
+         "type":"menu",
+         "propsUrl":"http://",
+         "title":"item2",
+         "icon":"ic_action_call",
+         "dataSource":"url",
+         "components":[],
+         "layout":"fragment_item_grid",
+         "action":{"acType":"tipo",
+                   "params":[{"value":"par1"},{"value":"par2"},{"value":"par3"}]
+                   }
         }
 	]
 }

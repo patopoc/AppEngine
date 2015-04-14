@@ -13,9 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
-import com.example.bg.appengine.modules.modHome;
 import com.example.bg.appengine.utils.DataHandler;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ import java.util.List;
 
 public class AppEngine extends ActionBarActivity {
     final String TAG = "AppEngineTag";
+
     EngineConf mEngineConf;
     MainMenuDrawer mainMenuDrawer;
     private DrawerLayout mDrawerLayout;
@@ -39,8 +40,7 @@ public class AppEngine extends ActionBarActivity {
 
         Gson gson = new Gson();
         mEngineConf = gson.fromJson(engineConf, EngineConf.class);
-        Log.d(TAG, "modules: " + mEngineConf.modules.get(0).modDepParams.size());
-
+        Log.d(TAG, "dato:" + gson.toJson(mEngineConf));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
