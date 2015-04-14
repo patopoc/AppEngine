@@ -36,6 +36,7 @@ public class AppEngine extends ActionBarActivity {
 
         DataHandler dataHandler = new DataHandler(this);
         String engineConf = (String) dataHandler.getFromAsset("EngineData.json", "text");
+
         Gson gson = new Gson();
         mEngineConf = gson.fromJson(engineConf, EngineConf.class);
         Log.d(TAG, "modules: " + mEngineConf.modules.get(0).modDepParams.size());

@@ -1,11 +1,11 @@
 package com.example.bg.appengine;
 
-public class RowItem {
+public class MenuRowItem {
 
     private int itemText;
     private int itemIcon;
 
-    public RowItem(int itemText, int itemIcon) {
+    public MenuRowItem(int itemText, int itemIcon) {
         this.itemIcon = itemIcon;         //Drawable resource id
         this.itemText = itemText;        //String resource id
     }

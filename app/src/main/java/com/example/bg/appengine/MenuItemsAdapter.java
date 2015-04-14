@@ -15,21 +15,21 @@ import android.widget.TextView;
 public class MenuItemsAdapter extends BaseAdapter {
 
     Context context;
-    List<RowItem> rowItems;
+    List<MenuRowItem> menuRowItems;
 
-    public MenuItemsAdapter(Context context, List<RowItem> items) {
+    public MenuItemsAdapter(Context context, List<MenuRowItem> items) {
         this.context = context;
-        this.rowItems = items;
+        this.menuRowItems = items;
     }
 
     @Override
     public int getCount() {
-        return rowItems.size();
+        return menuRowItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return rowItems.get(position);
+        return menuRowItems.get(position);
     }
 
     @Override
@@ -48,9 +48,9 @@ public class MenuItemsAdapter extends BaseAdapter {
         ImageView icon = (ImageView) convertView.findViewById(R.id.itemIcon);
         TextView text = (TextView) convertView.findViewById(R.id.itemText);
 
-        icon.setImageResource(rowItems.get(position).getIcon());
-        Log.d("foto", rowItems.get(position).getIcon() + "");
-        text.setText(rowItems.get(position).getText());
+        icon.setImageResource(menuRowItems.get(position).getIcon());
+        Log.d("foto", menuRowItems.get(position).getIcon() + "");
+        text.setText(menuRowItems.get(position).getText());
 
         return convertView;
     }

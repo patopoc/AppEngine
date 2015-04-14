@@ -1,13 +1,9 @@
 package com.example.bg.appengine;
 
-import android.app.Activity;
-import android.content.Context;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -46,14 +42,14 @@ public class MainMenuDrawer {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        List<RowItem> rowItems = new ArrayList<>();
+        List<MenuRowItem> menuRowItems = new ArrayList<>();
         for (int i = 0; i < appModules.size(); i++) {
-            RowItem row = new RowItem(mActivity.getResources().getIdentifier(appModules.get(i).modMenuTitle, "string", mActivity.getPackageName())
+            MenuRowItem row = new MenuRowItem(mActivity.getResources().getIdentifier(appModules.get(i).modMenuTitle, "string", mActivity.getPackageName())
                     , mActivity.getResources().getIdentifier(appModules.get(i).modMenuIcon, "drawable", mActivity.getPackageName()));
-            rowItems.add(row);
+            menuRowItems.add(row);
         }
         mDrawerList = (ListView) mActivity.findViewById(R.id.left_drawer);
-        mDrawerList.setAdapter(new MenuItemsAdapter(mActivity, rowItems));
+        mDrawerList.setAdapter(new MenuItemsAdapter(mActivity, menuRowItems));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
     }
 
