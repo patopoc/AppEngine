@@ -24,7 +24,7 @@ import java.util.List;
 public class AppEngine extends ActionBarActivity {
     final String TAG = "AppEngineTag";
 
-    EngineConf mEngineConf;
+    public static EngineConf mEngineConf;
     MainMenuDrawer mainMenuDrawer;
     private DrawerLayout mDrawerLayout;
 
@@ -45,7 +45,7 @@ public class AppEngine extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         if (mEngineConf.menuType.equals("drawer")) {
-            mainMenuDrawer = new MainMenuDrawer(this, mDrawerLayout, mEngineConf.modules);
+            mainMenuDrawer = new MainMenuDrawer(this, mDrawerLayout);
         }
 
     }

@@ -7,7 +7,6 @@ import android.widget.LinearLayout;
 
 import com.example.bg.appengine.modules.ActionBuilder;
 import com.example.bg.appengine.modules.AdapterBuilder;
-import com.example.bg.appengine.modules.ComponentBuilder;
 import com.example.bg.appengine.modules.DataFactory;
 
 import java.util.List;
@@ -18,7 +17,8 @@ import java.util.List;
 public class Component {
     public String parent;
     public String name;
-    public String type;
+    public String compClass;
+    public String classAdapter;
     public String propsUrl;
     public String title;
     public String icon;
@@ -27,13 +27,19 @@ public class Component {
     public String layout;
     public ActionBuilder action;
     public AdapterBuilder adapterBuilder;
-    ComponentBuilder componentBuilder;
+
+    private Object mInstance;
 
     public Component() {
 
     }
 
-    public void createComponentUI(Context context, View parentView, BaseAdapter adapter) {
+    public void createComponentUI(Context context, View parentView) {
+        try {
+            mInstance = Class.forName(compClass);
+        }
+        catch(ClassNotFoundException e){
 
+        }
     }
 }

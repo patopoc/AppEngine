@@ -30,10 +30,10 @@ public class MainMenuDrawer {
     List<Component> mAppModules;
 
 
-    public MainMenuDrawer(ActionBarActivity activity, DrawerLayout drawerLayout, List<Component> appModules) {
+    public MainMenuDrawer(ActionBarActivity activity, DrawerLayout drawerLayout) {
         mActivity = activity;
         mDrawerLayout = drawerLayout;
-        mAppModules = appModules;
+        mAppModules = AppEngine.mEngineConf.modules;
         mDrawerToggle = new ActionBarDrawerToggle(mActivity, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
             public void onDrawerOpened(View view) {
@@ -93,7 +93,7 @@ public class MainMenuDrawer {
             Bundle args = new Bundle();
             Gson gson = new Gson();
             args.putString(ModuleContainer.MOD_LAYOUT, mAppModules.get(position).layout);
-            args.putString(ModuleContainer.MOD_COMPONENTS, gson.toJson(mAppModules.get(position).components));
+            args.putString(ModuleContainer.MOD_NAME, mAppModules.get(position).name);
             moduleContainer.setArguments(args);
 
             FragmentManager fragmentManager = mActivity.getSupportFragmentManager();

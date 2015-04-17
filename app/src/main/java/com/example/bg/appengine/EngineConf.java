@@ -1,5 +1,6 @@
 package com.example.bg.appengine;
 
+
 import java.util.List;
 
 /**
@@ -12,5 +13,4 @@ public class EngineConf {
     String sessionControl;
     String homeMod;
     List<Component> modules;
-
 }
