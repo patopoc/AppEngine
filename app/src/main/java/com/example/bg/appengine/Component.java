@@ -2,6 +2,7 @@ package com.example.bg.appengine;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 
 import com.example.bg.appengine.modules.ActionBuilder;
@@ -32,7 +33,7 @@ public class Component {
 
     }
 
-    public void createComponentUI(Context context, View parentView) {
+    public void createComponentUI(Context context, View parentView, BaseAdapter adapter) {
 
     }
 }
