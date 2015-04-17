@@ -29,6 +29,7 @@ public class Component {
     public AdapterBuilder adapterBuilder;
 
     private Object mInstance;
+    private BaseAdapter mAdapter;
 
     public Component() {
 
@@ -41,5 +42,11 @@ public class Component {
         catch(ClassNotFoundException e){
 
         }
+        //si necesita adapter
+        //mAdapter=AdapterBuilder.build(components)
+    }
+
+    public void loadComponent(){
+        //cargar datos segun dataSource
     }
 }
